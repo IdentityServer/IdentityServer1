@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="WebSite__WindowsAzure_.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="WebSite (WindowsAzure)" vmsize="Small">
+    <Startup>
+      <Task commandLine="startup\unlockSSL.cmd" executionContext="elevated" taskType="simple" />
+      <Task commandLine="startup\disableTimeout.cmd" executionContext="elevated" taskType="simple" />
+    </Startup>
+    <Runtime>
+      <EntryPoint>
+        <NetFxEntryPoint assemblyName="Thinktecture.IdentityServer.WindowsAzure.dll" targetFrameworkVersion="v4.0" />
+      </EntryPoint>
+    </Runtime>
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="HTTP" />
+          <Binding name="Endpoint2" endpointName="HTTPS" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="HTTP" protocol="http" port="80" />
+      <InputEndpoint name="HTTPS" protocol="https" port="443" certificate="SSL" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <!--<Import moduleName="RemoteAccess" />
+      <Import moduleName="RemoteForwarder" />-->
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="StorageConnectionString" />
+      <Setting name="SiteName" />
+      <Setting name="IssuerUri" />
+      <Setting name="IssuerContactEmail" />
+      <Setting name="DefaultTokenType" />
+      <Setting name="DefaultTokenLifetime" />
+      <Setting name="MaximumTokenLifetime" />
+      <Setting name="SsoCookieLifetime" />
+      <Setting name="RequireSsl" />
+      <Setting name="RequireEncryption" />
+      <Setting name="EnableClientCertificates" />
+      <Setting name="EnableDelegation" />
+      <Setting name="AllowKnownRealmsOnly" />
+      <Setting name="AllowReplyTo" />
+      <Setting name="RequireReplyToWithinRealm" />
+      <Setting name="EnableStrongEpiForSsl" />
+      <Setting name="EnableFederationMessageTracing" />
+      <Setting name="EnforceUsersGroupMembership" />
+      <Setting name="RequireSignInConfirmation" />
+      <Setting name="Endpoints__WSFederation" />
+      <Setting name="Endpoints__FederationMetadata" />
+      <Setting name="Endpoints__WSTrustMessage" />
+      <Setting name="Endpoints__WSTrustMixed" />
+      <Setting name="Endpoints__SimpleHttp" />
+      <Setting name="Endpoints__OAuth2" />
+      <Setting name="Endpoints__WRAP" />
+      <Setting name="Endpoints__JSNotify" />
+      <Setting name="HttpPort" />
+      <Setting name="HttpsPort" />
+      <Setting name="SslCertificateDistinguishedName" />
+      <Setting name="SigningCertificateDistinguishedName" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="SSL" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+</ServiceDefinition>

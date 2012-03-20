@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9C90A36-86C0-4974-B0B4-3524F508D847}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thinktecture.IdentityServer.Web</RootNamespace>
+    <AssemblyName>Thinktecture.IdentityServer.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=2.0.0.232, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.2.0.0\lib\net40-client\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="RouteDebugger, Version=2.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\routedebugger.2.1.1\lib\net40\RouteDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\SqlServerCompact.4.0.8482.1\lib\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.4.1.8482.2\lib\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\System.Web.Providers.1.0.1\lib\Net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Thinktecture.IdentityModel, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Thinktecture.IdentityModel.1.3.0.0\lib\Thinktecture.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivator, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebActivator.1.5\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\AccountController.cs">
+      <Link>Controllers\AccountController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\AdminController.cs">
+      <Link>Controllers\Admin\AdminController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\ClientCertificatesAdminController.cs">
+      <Link>Controllers\Admin\ClientCertificatesAdminController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\DelegationAdminController.cs">
+      <Link>Controllers\Admin\DelegationAdminController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\RelyingPartiesAdminController.cs">
+      <Link>Controllers\Admin\RelyingPartiesAdminController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\FederationMetadataController.cs">
+      <Link>Controllers\FederationMetadataController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\HomeController.cs">
+      <Link>Controllers\HomeController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\JSNotifyController.cs">
+      <Link>Controllers\Issue\JSNotifyController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\OAuth2Controller.cs">
+      <Link>Controllers\Issue\OAuth2Controller.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\SimpleHttpController.cs">
+      <Link>Controllers\Issue\SimpleHttpController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\WrapController.cs">
+      <Link>Controllers\Issue\WrapController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\WSFederationController.cs">
+      <Link>Controllers\Issue\WSFederationController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\AddClientCertificateModel.cs">
+      <Link>ViewModels\Administration\AddClientCertificateModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\AddDelegationModel.cs">
+      <Link>ViewModels\Administration\AddDelegationModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EditCertificatesModel.cs">
+      <Link>ViewModels\Administration\EditCertificatesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EditClientCertificatesModel.cs">
+      <Link>ViewModels\Administration\EditClientCertificatesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EditDelegationModel.cs">
+      <Link>ViewModels\Administration\EditDelegationModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EndpointConfigurationModel.cs">
+      <Link>ViewModels\Administration\EndpointConfigurationModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\Extensions.cs">
+      <Link>ViewModels\Administration\Extensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\GlobalConfigurationModel.cs">
+      <Link>ViewModels\Administration\GlobalConfigurationModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\MyModel.cs">
+      <Link>ViewModels\Administration\MyModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\RelyingPartiesModel.cs">
+      <Link>ViewModels\Administration\RelyingPartiesModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\RelyingPartyModel.cs">
+      <Link>ViewModels\Administration\RelyingPartyModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\OnPremise\WebSite\ViewModels\SignInModel.cs">
+      <Link>ViewModels\SignInModel.cs</Link>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Azure readme.txt" />
+    <Content Include="Content\images\logo.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="license.txt" />
+    <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\SignIn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\repositories.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\wif.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\connectionStrings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\profile.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\tracing.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\MyClaims.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Configuration.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Endpoints.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Certificates.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RelyingPartiesAdmin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RelyingPartiesAdmin\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RelyingPartiesAdmin\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\RelyingPartiesAdmin\Add.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ClientCertificatesAdmin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ClientCertificatesAdmin\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ClientCertificatesAdmin\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ClientCertificatesAdmin\Add.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DelegationAdmin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DelegationAdmin\Add.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DelegationAdmin\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DelegationAdmin\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\SignedOut.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\WSFederation\SignOut.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\InitialConfiguration\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\AppIntegration.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Confirm.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Startup\disableTimeout.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Startup\unlockSSL.cmd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Thinktecture.IdentityServer.Core.Repositories\Thinktecture.IdentityServer.Core.Repositories.csproj">
+      <Project>{9658F86F-3059-4731-9EB0-5F67A4FF1A8A}</Project>
+      <Name>Thinktecture.IdentityServer.Core.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Thinktecture.IdentityServer.Core\Thinktecture.IdentityServer.Core.csproj">
+      <Project>{38CE5C59-909E-4DA6-8E1D-7EEE7312CA9A}</Project>
+      <Name>Thinktecture.IdentityServer.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Thinktecture.IdentityServer.Web.Library\Thinktecture.IdentityServer.Web.Library.csproj">
+      <Project>{FC2D7E2A-65A2-480F-AAE8-855FD026AF85}</Project>
+      <Name>Thinktecture.IdentityServer.Web.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Thinktecture.IdentityServer.WindowsAzure\Thinktecture.IdentityServer.WindowsAzure.csproj">
+      <Project>{36D5F61F-F4BA-41F8-AA13-1F32DDB970A4}</Project>
+      <Name>Thinktecture.IdentityServer.WindowsAzure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+xcopy /s /y "$(SolutionDir)packages\SqlServerCompact.4.0.8482.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+xcopy /s /y "$(SolutionDir)packages\SqlServerCompact.4.0.8482.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

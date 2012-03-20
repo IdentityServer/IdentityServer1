@@ -1,0 +1,17 @@
+bin/
+obj/
+packages/
+TestResults/
+build/
+DefaultConfiguration/
+Documentation/
+csx/
+Profiles/
+
+ServiceConfiguration.Cloud.cscfg
+ServiceConfiguration.Local.cscfg
+ServiceDefinition.build.csdef
+testimpactdata.sdf
+Packages.dgml
+*.suo
+*.user
