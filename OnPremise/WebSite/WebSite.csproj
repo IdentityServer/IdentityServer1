@@ -115,36 +115,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\EntityFramework.SqlServerCompact.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Admin\AdminController.cs" />
-    <Compile Include="Controllers\Admin\ClientCertificatesAdminController.cs" />
-    <Compile Include="Controllers\InitialConfigurationController.cs" />
-    <Compile Include="Controllers\Issue\JSNotifyController.cs" />
-    <Compile Include="Controllers\Issue\OAuth2Controller.cs" />
-    <Compile Include="Controllers\Issue\WrapController.cs" />
-    <Compile Include="Controllers\Issue\WSFederationController.cs" />
-    <Compile Include="Controllers\Admin\DelegationAdminController.cs" />
-    <Compile Include="Controllers\FederationMetadataController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Issue\SimpleHttpController.cs" />
-    <Compile Include="Controllers\Admin\RelyingPartiesAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\Administration\AddClientCertificateModel.cs" />
-    <Compile Include="ViewModels\Administration\AddDelegationModel.cs" />
-    <Compile Include="ViewModels\Administration\EditDelegationModel.cs" />
-    <Compile Include="ViewModels\Administration\EditClientCertificatesModel.cs" />
-    <Compile Include="ViewModels\Administration\EndpointConfigurationModel.cs" />
-    <Compile Include="ViewModels\Administration\Extensions.cs" />
-    <Compile Include="ViewModels\Administration\GlobalConfigurationModel.cs" />
-    <Compile Include="ViewModels\Administration\RelyingPartyModel.cs" />
-    <Compile Include="ViewModels\Administration\EditCertificatesModel.cs" />
-    <Compile Include="ViewModels\Administration\MyModel.cs" />
-    <Compile Include="ViewModels\Administration\RelyingPartiesModel.cs" />
-    <Compile Include="ViewModels\InitialConfigurationModel.cs" />
-    <Compile Include="ViewModels\SignInModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\IdentityServerConfiguration.sdf" />

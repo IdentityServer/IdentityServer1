@@ -130,78 +130,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\AccountController.cs">
-      <Link>Controllers\AccountController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\AdminController.cs">
-      <Link>Controllers\Admin\AdminController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\ClientCertificatesAdminController.cs">
-      <Link>Controllers\Admin\ClientCertificatesAdminController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\DelegationAdminController.cs">
-      <Link>Controllers\Admin\DelegationAdminController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Admin\RelyingPartiesAdminController.cs">
-      <Link>Controllers\Admin\RelyingPartiesAdminController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\FederationMetadataController.cs">
-      <Link>Controllers\FederationMetadataController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\HomeController.cs">
-      <Link>Controllers\HomeController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\JSNotifyController.cs">
-      <Link>Controllers\Issue\JSNotifyController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\OAuth2Controller.cs">
-      <Link>Controllers\Issue\OAuth2Controller.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\SimpleHttpController.cs">
-      <Link>Controllers\Issue\SimpleHttpController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\WrapController.cs">
-      <Link>Controllers\Issue\WrapController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\Controllers\Issue\WSFederationController.cs">
-      <Link>Controllers\Issue\WSFederationController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\AddClientCertificateModel.cs">
-      <Link>ViewModels\Administration\AddClientCertificateModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\AddDelegationModel.cs">
-      <Link>ViewModels\Administration\AddDelegationModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EditCertificatesModel.cs">
-      <Link>ViewModels\Administration\EditCertificatesModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EditClientCertificatesModel.cs">
-      <Link>ViewModels\Administration\EditClientCertificatesModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EditDelegationModel.cs">
-      <Link>ViewModels\Administration\EditDelegationModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\EndpointConfigurationModel.cs">
-      <Link>ViewModels\Administration\EndpointConfigurationModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\Extensions.cs">
-      <Link>ViewModels\Administration\Extensions.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\GlobalConfigurationModel.cs">
-      <Link>ViewModels\Administration\GlobalConfigurationModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\MyModel.cs">
-      <Link>ViewModels\Administration\MyModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\RelyingPartiesModel.cs">
-      <Link>ViewModels\Administration\RelyingPartiesModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\Administration\RelyingPartyModel.cs">
-      <Link>ViewModels\Administration\RelyingPartyModel.cs</Link>
-    </Compile>
-    <Compile Include="..\..\OnPremise\WebSite\ViewModels\SignInModel.cs">
-      <Link>ViewModels\SignInModel.cs</Link>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,8 +138,8 @@
   <ItemGroup>
     <Content Include="Azure readme.txt" />
     <Content Include="Content\images\logo.jpg" />
-    <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
