@@ -65,6 +65,7 @@
     <Compile Include="Repositories\TableStorageContext.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Users\TableStorageClaimsRepository.cs" />
     <Compile Include="Repositories\Users\PasswordCrypto.cs" />
     <Compile Include="Repositories\Users\UserAccountEntity.cs" />
     <Compile Include="Repositories\Users\TableStorageUserRepository.cs" />

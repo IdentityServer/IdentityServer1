@@ -73,6 +73,7 @@
     <Compile Include="MemoryCacheRepository.cs" />
     <Compile Include="NullCacheRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderClaimsRepository.cs" />
     <Compile Include="ProviderUserRepository.cs" />
     <Compile Include="EntityModel\RelyingParties.cs" />
     <Compile Include="RelyingPartyRepository.cs" />

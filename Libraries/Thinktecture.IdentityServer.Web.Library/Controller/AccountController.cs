@@ -82,7 +82,7 @@ namespace Thinktecture.IdentityServer.Web.Controllers
                 }
             }
 
-            return View();
+            return View("Error");
         }
 
         public ActionResult SignOut()

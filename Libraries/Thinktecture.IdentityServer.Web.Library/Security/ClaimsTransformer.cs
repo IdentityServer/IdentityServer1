@@ -31,7 +31,7 @@ namespace Thinktecture.IdentityServer.Web.Security
                 return base.Authenticate(resourceName, incomingPrincipal);
             }
 
-            UserRepository.GetRoles(incomingPrincipal.Identity.Name, RoleTypes.IdentityServer).ToList().ForEach(role =>
+            UserRepository.GetRoles(incomingPrincipal.Identity.Name).ToList().ForEach(role =>
                 incomingPrincipal.Identities[0].Claims.Add(new Claim(ClaimTypes.Role, role)));
 
             return incomingPrincipal;

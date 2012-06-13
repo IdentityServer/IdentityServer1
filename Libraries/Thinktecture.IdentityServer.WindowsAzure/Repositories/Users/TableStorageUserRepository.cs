@@ -13,7 +13,7 @@ namespace Thinktecture.IdentityServer.Repositories.WindowsAzure
     public class TableStorageUserRepository : IUserRepository
     {
         CloudStorageAccount _account;
-        
+
         [Import]
         public IClientCertificatesRepository ClientCertificateRepository { get; set; }
 
@@ -69,38 +69,20 @@ namespace Thinktecture.IdentityServer.Repositories.WindowsAzure
             return ClientCertificateRepository.TryGetUserNameFromThumbprint(clientCertificate, out userName);
         }
 
-        public IEnumerable<string> GetRoles(string userName, RoleTypes roleType)
+        public IEnumerable<string> GetRoles(string userName)
         {
-            if (roleType == RoleTypes.IdentityServer)
+            UserAccountEntity account = null;
+            if (TryGetUserAccount(userName, out account))
             {
-                UserAccountEntity account = null;
-                if (TryGetUserAccount(userName, out account))
+                if (!string.IsNullOrWhiteSpace(account.InternalRoles))
                 {
-                    if (!string.IsNullOrWhiteSpace(account.InternalRoles))
-                    {
-                        var roles = account.InternalRoles.Split(',');
-                        return new List<string>(from r in roles select r);
-                    }
-
+                    var roles = account.InternalRoles.Split(',');
+                    return new List<string>(from r in roles select r);
                 }
+
             }
 
             return new string[] { };
-        }
-
-        public IEnumerable<Claim> GetClaims(IClaimsPrincipal principal, RequestDetails requestDetails)
-        {
-            var claims = from c in NewContext.UserClaims
-                         where c.PartitionKey == principal.Identity.Name.ToLower() &&
-                               c.Kind == UserClaimEntity.EntityKind
-                         select new Claim(c.ClaimType, c.Value);
-
-            return claims.ToList();
-        }
-
-        public IEnumerable<string> GetSupportedClaimTypes()
-        {
-            return new string[] { ClaimTypes.Name, ClaimTypes.Role, ClaimTypes.Email };
         }
 
         private bool TryGetUserAccount(string userName, out UserAccountEntity account)

@@ -104,6 +104,7 @@
     <Compile Include="Models\GlobalConfiguration.cs" />
     <Compile Include="Endpoints.cs" />
     <Compile Include="Helper\Cache.cs" />
+    <Compile Include="Repositories\IClaimsRepository.cs" />
     <Compile Include="Repositories\IClientCertificatesRepository.cs" />
     <Compile Include="Repositories\ICacheRepository.cs" />
     <Compile Include="Repositories\IDelegationRepository.cs" />

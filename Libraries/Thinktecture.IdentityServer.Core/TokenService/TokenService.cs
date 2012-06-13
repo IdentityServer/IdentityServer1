@@ -35,16 +35,20 @@ namespace Thinktecture.IdentityServer.TokenService
         [Import]
         public IUserRepository UserRepository { get; set; }
 
+        [Import]
+        public IClaimsRepository ClaimsRepository { get; set; }
+
         public TokenService(SecurityTokenServiceConfiguration configuration)
             : base(configuration)
         {
             Container.Current.SatisfyImportsOnce(this);
         }
 
-        public TokenService(SecurityTokenServiceConfiguration configuration, IUserRepository userRepository)
+        public TokenService(SecurityTokenServiceConfiguration configuration, IUserRepository userRepository, IClaimsRepository claimsRepository)
             : base(configuration)
         {
             UserRepository = userRepository;
+            ClaimsRepository = claimsRepository;
         }
 
         protected GlobalConfiguration GlobalConfiguration
@@ -105,7 +109,7 @@ namespace Thinktecture.IdentityServer.TokenService
         {
             var requestDetails = (scope as RequestDetailsScope).RequestDetails;
 
-            var userClaims = GetOutputClaims(principal, requestDetails, UserRepository);
+            var userClaims = GetOutputClaims(principal, requestDetails, ClaimsRepository);
             var outputIdentity = new ClaimsIdentity(userClaims);
 
             if (requestDetails.IsActAsRequest)
@@ -120,7 +124,7 @@ namespace Thinktecture.IdentityServer.TokenService
             }
         }
 
-        public static List<Claim> GetOutputClaims(IClaimsPrincipal principal, RequestDetails requestDetails, IUserRepository userRepository)
+        public static List<Claim> GetOutputClaims(IClaimsPrincipal principal, RequestDetails requestDetails, IClaimsRepository claimsRepository)
         {
             var name = principal.FindClaims(ClaimTypes.Name).First().Value;
             var nameId = new Claim(ClaimTypes.NameIdentifier, name);
@@ -133,7 +137,7 @@ namespace Thinktecture.IdentityServer.TokenService
                 AuthenticationInstantClaim.Now
             };
 
-            userClaims.AddRange(userRepository.GetClaims(principal, requestDetails));
+            userClaims.AddRange(claimsRepository.GetClaims(principal, requestDetails));
 
             return userClaims;
         }

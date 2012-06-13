@@ -40,6 +40,9 @@ namespace Thinktecture.IdentityServer.TokenService
         [Import]
         public IUserRepository UserRepository { get; set; }
 
+        [Import]
+        public IClaimsRepository ClaimsRepository { get; set; }
+
         public WSFederationMetadataGenerator(Endpoints endpoints)
         {
             _endpoints = endpoints;
@@ -73,7 +76,7 @@ namespace Thinktecture.IdentityServer.TokenService
             tokenService.TokenTypesOffered.Add(new Uri(Microsoft.IdentityModel.Tokens.SecurityTokenTypes.OasisWssSaml2TokenProfile11));
             tokenService.TokenTypesOffered.Add(new Uri(SimpleWebToken.OasisTokenProfile));
 
-            UserRepository.GetSupportedClaimTypes().ToList().ForEach(claimType => tokenService.ClaimTypesOffered.Add(new DisplayClaim(claimType)));
+            ClaimsRepository.GetSupportedClaimTypes().ToList().ForEach(claimType => tokenService.ClaimTypesOffered.Add(new DisplayClaim(claimType)));
             tokenService.ProtocolsSupported.Add(new Uri("http://docs.oasis-open.org/wsfed/federation/200706"));
 
             if (ConfigurationRepository.Endpoints.WSTrustMessage)

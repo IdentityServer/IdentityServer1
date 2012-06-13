@@ -209,7 +209,7 @@ namespace Thinktecture.IdentityServer.Web.Security
                     {
                         new Claim(ClaimTypes.Name, username),
                         new Claim(ClaimTypes.AuthenticationMethod, authenticationMethod),
-                        AuthenticationInstantClaim.Now
+                        AuthenticationInstantClaim.Now,
                     };
 
             var principal = ClaimsPrincipal.CreateFromIdentity(new ClaimsIdentity(claims));

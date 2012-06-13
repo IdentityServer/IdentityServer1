@@ -33,6 +33,9 @@ namespace Thinktecture.IdentityServer.Web.Controllers
         public IUserRepository UserRepository { get; set; }
 
         [Import]
+        public IClaimsRepository ClaimsRepository { get; set; }
+
+        [Import]
         public IConfigurationRepository ConfigurationRepository { get; set; }
 
         public AdminController()
@@ -40,9 +43,10 @@ namespace Thinktecture.IdentityServer.Web.Controllers
             Container.Current.SatisfyImportsOnce(this);
         }
 
-        public AdminController(IUserRepository userRepository, IConfigurationRepository configurationRepository)
+        public AdminController(IUserRepository userRepository, IConfigurationRepository configurationRepository, IClaimsRepository claimsRepository)
         {
             UserRepository = userRepository;
+            ClaimsRepository = claimsRepository;
             ConfigurationRepository = configurationRepository;
         }
 
@@ -189,7 +193,7 @@ namespace Thinktecture.IdentityServer.Web.Controllers
         #region Helper
         private List<Claim> GetClaims()
         {
-            return TokenService.TokenService.GetOutputClaims(HttpContext.User as IClaimsPrincipal, null, UserRepository);
+            return TokenService.TokenService.GetOutputClaims(HttpContext.User as IClaimsPrincipal, null, ClaimsRepository);
         }
 
         private List<string> GetAvailableCertificatesFromStore()

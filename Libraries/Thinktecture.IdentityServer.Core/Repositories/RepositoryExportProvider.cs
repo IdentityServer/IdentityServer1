@@ -28,6 +28,7 @@ namespace Thinktecture.IdentityServer.Repositories
             {
                 { typeof(IConfigurationRepository).FullName, section.TokenServiceConfiguration },
                 { typeof(IUserRepository).FullName, section.UserManagement },
+                { typeof(IClaimsRepository).FullName, section.ClaimsRepository },
                 { typeof(IRelyingPartyRepository).FullName, section.RelyingParties },
                 { typeof(IClientCertificatesRepository).FullName, section.ClientCertificates},
                 { typeof(IDelegationRepository).FullName, section.Delegation},
