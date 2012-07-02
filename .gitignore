@@ -3,7 +3,6 @@ obj/
 packages/
 TestResults/
 build/
-DefaultConfiguration/
 Documentation/
 csx/
 Profiles/
