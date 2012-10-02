@@ -1,4 +1,4 @@
-# Thinktecture.IdentityServer.45 #
+# Thinktecture.IdentityServer v1 #
 
 Thinktecture IdentityServer is a light-weight security token service built with .NET 4.0, MVC 3, WCF and WIF.
 
