@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>thinktecture identityserver 1.0</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Thinktecture IdentityServer 1.0 : Lightweight, easy to use security token service based on .NET &amp; WIF 1.0" />
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+              padding-top: 60px;
+              padding-bottom: 40px;
+            }
+        </style>
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    </head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <body>
+        <div class="container">
 
-    <title>Thinktecture IdentityServer 1.0</title>
-  </head>
+            <div class="hero-unit">
+                <h1>thinktecture identityserver 1.0</h1>
+                <p>Light-weight, .NET based security token service that supports various protocols and token formats.</p>
+                <a href="http://www.thinktecture.com" target="_blank">company website</a>
 
-  <body>
+            </div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/thinktecture/IdentityServer.v1">View on GitHub</a>
+            <div class="row">
+                <div class="span10">
+                    <p>
+                        <a class="btn btn-primary" href="https://github.com/thinktecture/IdentityServer.v1">Source code</a>
+                        <a class="btn btn-primary" href="https://github.com/thinktecture/IdentityServer.v1/downloads">Download</a>
+                    </p>
 
-          <h1 id="project_title">Thinktecture IdentityServer 1.0</h1>
-          <h2 id="project_tagline">Lightweight, easy to use security token service based on .NET &amp; WIF 1.0</h2>
+                    <p class="text-error">
+                        <strong>Version 1.0 is based on .NET 4.0 and WIF. See <a href="http://thinktecture.github.com/Thinktecture.IdentityServer.v2">here</a> for the latest version for .NET 4.5.</strong>
+                    </p>
+                </div>
+            </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/thinktecture/IdentityServer.v1/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/thinktecture/IdentityServer.v1/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+            <div class="row" style="padding-top: 30px">
+                <div class="span10">
+                    <h2>Overview</h2>
+                    <img src="img/overview.png" alt="overview" />
+                </div>
+            </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>Thinktecture.IdentityServer 1.0</h1>
+            <div class="row">
+                <div class="span10">
+                    <h2>Features</h2>
 
-<p>Thinktecture IdentityServer is a light-weight security token service built with .NET 4.0, MVC 3, WCF and WIF.</p>
+                    <ul>
+                        <li>Multiple protocols support (WS-Trust, WS-Federation, OAuth2, WRAP, JSNotify, HTTP GET)</li>
+                        <li>Multiple token support (SAML 1.1/2.0, SWT)</li>
+                        <li>Out of the box integration with ASP.NET membership, roles and profile</li>
+                        <li>Support for username/password and client certificates authentication</li>
+                        <li>Support for WS-Federation metadata</li>
+                        <li>Support for WS-Trust identity delegation</li>
+                        <li>Extensibility points to customize configuration and user management handling</li>
+                    </ul>
+                </div>
+            </div>
 
-<h2>High level features</h2>
+            <div class="row" style="padding-top: 30px">
+                <div class="span10">
+                    <p>
+                        <a href="http://wiki.thinktecture.com/IdentityServer.MainPage.ashx" target="_blank">Documentation</a>
+                    </p>
+                    <p>
+                        <a href="http://www.leastprivilege.com" target="_blank">Dominick's Blog</a>
+                    </p>
+                    <p>
+                        <a href="http://www.brockallen.com" target="_blank">Brock's Blog</a>
+                    </p>
+                </div>
+            </div>
 
-<ul>
-<li>Multiple protocols support (WS-Trust, WS-Federation, OAuth2, WRAP, JSNotify, HTTP GET)</li>
-<li>Multiple token support (SAML 1.1/2.0, SWT)</li>
-<li>Out of the box integration with ASP.NET membership, roles and profile</li>
-<li>Support for username/password and client certificates authentication</li>
-<li>Support for WS-Federation metadata</li>
-<li>Support for WS-Trust identity delegation</li>
-<li>Extensibility points to customize configuration and user management handling</li>
-</ul><p><a href="http://claudioasanchez.blogspot.de/2011/12/walk-though-of-provisioning-identity.html">Setup walkthrough</a></p>
+            <hr>
 
-<p><a href="http://wiki.thinktecture.com/IdentityServer.MainPage.ashx">Preliminary Docs</a></p>
-      </section>
-    </div>
+            <footer>
+                <p>&copy; thinktecture 2012</p>
+            </footer>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Thinktecture IdentityServer 1.0 maintained by <a href="https://github.com/thinktecture">thinktecture</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+        </div> <!-- /container -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
 </html>
