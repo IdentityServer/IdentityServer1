@@ -2,6 +2,8 @@
 
 Thinktecture IdentityServer is a light-weight security token service built with .NET 4.0, MVC 3, WCF and WIF.
 
+**Status: This project is no longer maintained.**
+
 ## High level features
 
 - Multiple protocols support (WS-Trust, WS-Federation, OAuth2, WRAP, JSNotify, HTTP GET)
